@@ -1,0 +1,12 @@
+# Frontend Dependencies (npm)
+react
+react-dom
+react-router-dom
+axios
+lucide-react
+typescript
+vite
+@vitejs/plugin-react
+@types/react
+@types/react-dom
+@types/node

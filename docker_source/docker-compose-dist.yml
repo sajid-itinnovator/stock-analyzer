@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  webapp:
+    image: stock-webapp:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGODB_URI=mongodb://mongo:27017/stockai
+      - PYTHON_AGENT_URL=http://agent:8000/agent
+      - NODE_ENV=production
+    depends_on:
+      - mongo
+      - agent
+    networks:
+      - stock-network
+    restart: unless-stopped
+
+  agent:
+    image: stock-agent:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    networks:
+      - stock-network
+    restart: unless-stopped
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - stock-network
+    restart: unless-stopped
+
+networks:
+  stock-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
