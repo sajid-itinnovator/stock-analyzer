@@ -14,3 +14,4 @@ backend-python/
 test_llm_connection.py
 verify_agents.ps1
 verify_news.pyverify_ticker.py
+backend-python/build/stock-agent/PYZ-00.pyz
