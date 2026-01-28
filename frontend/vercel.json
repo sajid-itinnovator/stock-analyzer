@@ -1,0 +1,15 @@
+{
+    "buildCommand": "npm run build:frontend",
+    "outputDirectory": "frontend/dist",
+    "framework": "vite",
+    "env": {
+        "VITE_NODE_API_URL": "@node_api_url",
+        "VITE_PYTHON_API_URL": "@python_api_url"
+    },
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
