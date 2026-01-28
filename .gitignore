@@ -8,3 +8,9 @@ coverage/
 .vscode/
 credentials.json
 StockResearch_Docker_Dist/
+backend-python/build/
+*.pkg
+*.pyz
+test_llm_connection.py
+verify_agents.ps1
+verify_news.pyverify_ticker.py
