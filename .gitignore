@@ -8,7 +8,6 @@ coverage/
 .vscode/
 credentials.json
 StockResearch_Docker_Dist/
-backend-python/
 *.pkg
 *.pyz
 test_llm_connection.py
